@@ -1,0 +1,61 @@
+@use "./../01-abstracts/" as *;
+
+body {
+  font-family: $font;
+  font-weight: 400;
+  color: var(--color-font-2);
+  font-size: rem(13px);
+  line-height: 19px;
+
+  @include breakpoint($md) {
+    font-size: rem(15px);
+    line-height: 25px;
+  }
+}
+
+.h1 {
+  font-weight: 700;
+  font-size: rem(16px);
+  line-height: 24px;
+  color: var(--color-font-1);
+
+  @include breakpoint($md) {
+    font-size: rem(26px);
+    line-height: 38px;
+  }
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: rem(16px);
+  line-height: 24px;
+  color: var(--color-font-1);
+
+  @include breakpoint($md) {
+    font-size: rem(22px);
+    line-height: 33px;
+  }
+}
+
+.h3 {
+  font-weight: 400;
+  font-size: rem(13px);
+  line-height: 19px;
+  color: $highlight;
+
+  @include breakpoint($md) {
+    font-size: rem(16px);
+    line-height: 24px;
+  }
+}
+
+.h4 {
+  font-weight: 400;
+  font-size: rem(11px);
+  line-height: 16px;
+
+  @include breakpoint($md) {
+    font-size: rem(13px);
+    line-height: 28px;
+  }
+}

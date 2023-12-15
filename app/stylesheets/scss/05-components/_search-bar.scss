@@ -1,0 +1,64 @@
+@use "../01-abstracts/" as *;
+
+.search-bar {
+  background-color: var(--color-bg-2);
+  border-radius: 15px;
+  margin: 36px 0 16px;
+  min-height: 60px;
+  display: flex;
+  row-gap: 10px;
+  padding: 6.5px 7px 7.5px 16px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+
+  @include breakpoint($md) {
+    min-height: 69px;
+    padding: 9.5px 10px 9.5px 32px;
+    margin-bottom: 24px;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    @include breakpoint($md) {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__input {
+    border: none;
+    background-color: inherit;
+    font-family: $font;
+    font-size: rem(13px);
+    line-height: 25px;
+    color: var(--color-title);
+    flex-grow: 1;
+    min-width: 0;
+    padding: 0;
+    margin-left: 9px;
+    margin-right: 7px;
+    caret-color: $highlight;
+    &::placeholder {
+      color: var(--color-font-2);
+    }
+
+    @include breakpoint($md) {
+      font-size: rem(18px);
+      margin-left: 24px;
+    }
+  }
+
+  &__error {
+    color: $error;
+    align-self: center;
+    margin-right: 10px;
+    @include breakpoint($lg) {
+      margin-right: 24px;
+    }
+  }
+
+  .dark & {
+    box-shadow: none;
+  }
+}

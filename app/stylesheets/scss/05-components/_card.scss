@@ -1,0 +1,144 @@
+@use "../01-abstracts/" as *;
+
+.card {
+  background-color: var(--color-bg-2);
+  margin-top: 16px;
+  padding: 32px 24px 48px;
+  border-radius: 15px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+
+  @include breakpoint($md) {
+    margin-top: 24px;
+    padding: 40px;
+  }
+
+  @include breakpoint($lg) {
+    padding: 48px;
+  }
+
+  .dark & {
+    box-shadow: none;
+  }
+}
+
+.user {
+  margin-bottom: 33px;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+
+  @include breakpoint($md) {
+    gap: 41px;
+    margin-bottom: 24px;
+  }
+
+  @include breakpoint($lg) {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    width: 70px;
+    border-radius: 100%;
+
+    @include breakpoint($md) {
+      width: 117px;
+    }
+    @include breakpoint($lg) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__info {
+    @include breakpoint($lg) {
+      margin-left: 154px;
+    }
+  }
+
+  &__username {
+    margin-bottom: 6px;
+  }
+
+  &__date-joined {
+    color: var(--color-font-3);
+
+    @include breakpoint($lg) {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
+
+.description {
+  margin: 33px 0 23px;
+  line-height: 25px;
+
+  @include breakpoint($md) {
+    margin: 32px 0 30px;
+  }
+  @include breakpoint($lg) {
+    margin: 20px 0 32px 154px;
+  }
+}
+
+.dashboard {
+  background-color: var(--color-bg-1);
+  border-radius: 10px;
+  margin: 23px 0 24px;
+  padding: 18px 14px 19px 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  text-align: center;
+
+  @include breakpoint($md) {
+    text-align: left;
+    margin: 32px 0 30px;
+    padding: 15px 96px 17px 32px;
+    justify-content: space-between;
+  }
+
+  @include breakpoint($lg) {
+    margin: 32px 0 37px 154px;
+    padding: 15px 83px 17px 32px;
+  }
+
+  &__li {
+    &-title {
+      margin-bottom: 8px;
+      @include breakpoint($md) {
+        margin-bottom: 1px;
+      }
+    }
+  }
+}
+
+.links {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 16px;
+  line-height: 19px;
+
+  @include breakpoint($md) {
+    row-gap: 19px;
+    column-gap: 0px;
+    max-height: 63px;
+  }
+  @include breakpoint($lg) {
+    margin: 37px 0 0 154px;
+  }
+
+  &__li {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    &-location {
+      margin-right: 6px;
+    }
+  }
+}

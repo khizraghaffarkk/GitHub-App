@@ -1,0 +1,18 @@
+@use "./../01-abstracts/" as *;
+
+.wrapper {
+  padding: 31px 0 79px;
+  margin: 0 24px;
+
+  @include breakpoint($md){
+      max-width: 573px;
+      padding: 140px 0 236px;
+      margin: 0 auto;
+    }
+    
+    @include breakpoint($lg){
+        max-width: 730px;
+        padding: 144px 0 170px;
+
+  }
+}

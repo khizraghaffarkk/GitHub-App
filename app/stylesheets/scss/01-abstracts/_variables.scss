@@ -1,0 +1,37 @@
+@use "./functions" as *;
+
+// Fonts
+$font: "Space Mono", monospace;
+
+// Colors
+$highlight: #0079ff;
+$highlight-hover: #60abff;
+$error: #f74646;
+$white: #fff;
+
+:root {
+  // Colors - Light Mode
+  --color-font-1: #2b3442;
+  --color-font-2: #4b6a9b;
+  --color-font-3: #697c9a;
+  --color-title: #222731;
+  --color-bg-1: #f6f8ff;
+  --color-bg-2: #fefefe;
+  --color-hover-toggle: #222731;
+}
+
+.dark {
+  --color-font-1: #fff;
+  --color-font-2: #fff;
+  --color-font-3: #fff;
+  --color-title: #fff;
+  --color-bg-1: #141d2f;
+  --color-bg-2: #1e2a47;
+  --color-hover-toggle: #90a4d4;
+}
+
+// Breakpoints
+$sm: 320px;
+$md: 640px;
+$lg: 960px;
+$x-lg: 1024px;

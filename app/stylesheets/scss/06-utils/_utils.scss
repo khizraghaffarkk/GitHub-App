@@ -1,0 +1,11 @@
+.opaque {
+  opacity: 0.5;
+  & a:hover {
+    text-decoration: none;
+    cursor: default;
+  }
+}
+
+.hidden {
+  display: none;
+}
