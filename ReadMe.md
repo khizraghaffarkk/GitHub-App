@@ -24,7 +24,7 @@ I developed the GitHub App using HTML, CSS, and JavaScript, incorporating **`API
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/khizraghaffarkk/Expense-Tracker-App.git
+   git clone https://github.com/khizraghaffarkk/GitHub-App.git
 2. **Navigate to the project directory**:
    ```bash
    cd path/to/your/directory
